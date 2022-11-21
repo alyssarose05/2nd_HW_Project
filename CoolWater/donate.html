@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8" />
+    	<title>CoolWater - Donate</title>
+		<link rel="stylesheet" href="css/donate.css" />
+  	</head>
+	<body>
+	
+	<!-- Top of page -->
+	<header>
+		<p id="name">~ CoolWater ~</p>
+		<p>by Alyssa Ayala</p>
+	</header>
+	<nav>
+      	<a id="home" href="./home.html">Home</a>
+      	<a id="statistics" href="./statistics.html">Statistics</a>
+      	<a id="drink" href="./drink.html">How Much to Drink</a>
+	  	<a id="donate" href="./donate.html">Donate</a>
+    </nav>
+	
+	<!-- Loading screen -->
+	<div class="load">
+		<div class="kinetic"></div>
+	</div>
+	
+	<div class="container" style="display:none">
+		<h2><b>Please donate to give water to someone in need!</b></h2>
+		
+		<!-- Donation Form -->
+		<form action="/submitted" method="post">
+			<label for="name1">Name:</label>
+			<input name="name1" type="text" id="name1" required></br>
+			<label for="email">Email:</label>
+			<input name="email" type="email" id="email" required></br>
+			<label for="amount">Donation Amount (U.S. Dollars): $</label>
+			<input name="amount" type="number" id="amount" required></br>
+			<label for="card">Credit/Debit Card Number:</label>
+			<input name="card" type="number" id="card" required></br>
+			<label for="expirationDate">Expiration Date:</label>
+			<input name="expirationDate" type="date" id="expirationDate" required></br>
+			<label for="cvc">CVC:</label>
+			<input name="cvc" type="number" id="cvc" required></br>
+			<label for="address">Billing Address:</label>
+			<input name="address" type="text" id="address" required></br>
+			<input class="btn" type="submit" id="submit"></br>
+		</form>
+	</div>
+	<script src="javascript/donate.js"></script>
+	</body>
+</html>

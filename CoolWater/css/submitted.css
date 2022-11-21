@@ -1,0 +1,226 @@
+header {
+	background-color: darkblue;
+	color: white;
+	font-family: monospace,sans-serif;
+	text-align: center;
+}
+
+#name {
+	font-weight: bold;
+	font-style: underline;
+	font-size: 24px;
+}
+
+nav {
+	overflow: hidden;
+	background-color: purple;
+	font-family: monospace,sans-serif;
+}
+
+nav a {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 25px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+nav a:hover {
+	background-color: #db7093;
+	color: black;
+}
+
+nav a#donate {
+	background-color: blue;
+	color: white;
+}
+
+body {
+	background-color: #301934;
+	font-family: monospace,sans-serif;
+	color: white;
+	height: 100vh;
+	overflow: hidden;
+}
+
+p {
+	text-align: center;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.btn {
+	background-color: blue;
+	color: white;
+	border: 0;
+	border-radius: 6px;
+	cursor: pointer;
+	font-family: monospace, sans-serif;
+	padding: 8px 30px;
+	margin: 30px;
+	font-size: 14px;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn:active {
+	transform:scale(.98);
+}
+
+/* Load Screen */
+.load {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.kinetic {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+}
+
+.kinetic::after, .kinetic::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: white;
+	animation: rotateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+	transform: rotate(90deg);
+	animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+	0%, 25% {
+		transform: rotate(0deg);
+	}
+	
+	50%, 75% {
+		transform: rotate(180deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateB{
+	0%, 25% {
+		transform: rotate(90deg);
+	}
+	
+	50%, 75% {
+		transform: rotate(270deg);
+	}
+	
+	100% {
+		transform: rotate(450deg);
+	}
+}
+
+/* Content Card Holder */
+img {
+	max-width: 100%;
+}
+
+.card {
+	box-shadow: 0 2px 10px white;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 350px;
+	color: black;
+}
+
+.card-header {
+	height: 250px;
+	background: white;
+}
+
+.card-header img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.card-content {
+	background: white;
+	padding: 30px;
+}
+
+.card-title {
+	height: 20px;
+	margin: 0;
+}
+
+.card-excerpt {
+	color: gray;
+	margin: 10px 0 20px;
+}
+
+.author {
+	display: flex;
+}
+
+.profile-img {
+	border-radius: 50%;
+	overflow: hidden;
+	height: 100x;
+	width: 100px;
+}
+
+.author-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-left: 10px;
+	width: 100px;
+}
+
+.author-info small {
+	color: gray;
+	margin-top: 5px;
+}
+
+.animated-bg {
+	background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
+	background-size: 200% 100%;
+	animation: bgPos 1s linear infinite;
+	
+}
+
+.animated-bg-text {
+	border-radius: 50px;
+	display: inline-block;
+	margin: 0;
+	height: 10px;
+	width: 100%;
+}
+
+@keyframes bgPos {
+	0% {
+		background-position: 50% 0;
+	}
+	
+	100% {
+		background-position: -150% 0;
+	}
+}

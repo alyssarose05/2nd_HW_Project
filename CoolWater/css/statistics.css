@@ -1,0 +1,138 @@
+header {
+	background-color: darkblue;
+	color: white;
+	font-family: monospace,sans-serif;
+	text-align: center;
+}
+
+#name {
+	font-weight: bold;
+	font-style: underline;
+	font-size: 24px;
+}
+
+nav {
+	overflow: hidden;
+	background-color: purple;
+	font-family: monospace,sans-serif;
+}
+
+nav a {
+	color: #f2f2f2;
+	text-align: center;
+	padding: 25px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+nav a:hover {
+	background-color: #db7093;
+	color: black;
+}
+
+nav a#statistics {
+	background-color: blue;
+	color: white;
+}
+
+body {
+	background-color: #301934;
+	font-family: monospace,sans-serif;
+	color: white;
+	height: 100vh;
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 75vh;
+	font-family: Consolas;
+}
+
+/* Load Screen */
+.load {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.kinetic {
+	position: relative;
+	height: 80px;
+	width: 80px;
+}
+
+.kinetic::after, .kinetic::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: white;
+	animation: rotateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+	transform: rotate(90deg);
+	animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+	0%, 25% {
+		transform: rotate(0deg);
+	}
+	
+	50%, 75% {
+		transform: rotate(180deg);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateB{
+	0%, 25% {
+		transform: rotate(90deg);
+	}
+	
+	50%, 75% {
+		transform: rotate(270deg);
+	}
+	
+	100% {
+		transform: rotate(450deg);
+	}
+}
+
+.counter-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin: 30px 50px;
+}
+
+.counter {
+	font-size: 60px;
+	margin-top: 10px;
+}
+
+@media(max-width: 580px) {
+	.container {
+		flex-direction: column;
+	}
+}
